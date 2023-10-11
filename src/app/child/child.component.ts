@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponent {
 
-  @Input() message!: string;
+  message: string = 'From child component';
   
   constructor(){}
 
