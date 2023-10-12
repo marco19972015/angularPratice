@@ -2,6 +2,13 @@
 <p>FirstName: {{ firstName }}</p>
 <p>LastName: {{ lastName }}</p>
 <p>Age: {{ age }}</p>
+
+<p> {{ product.phoneBrand }}</p>
+<p> {{ product.phoneType }}</p>
+<p> {{ product.phoneSerial }}</p>
+<p> {{ "Discounted price is: $" + getDiscount() }}</p>
+<p> {{product.inStock > 0 ? 'Only ' + product.inStock + ' items left': 'Not in Stock'}}</p>
+
         <div class="child">
             <app-child></app-child>
         </div>
