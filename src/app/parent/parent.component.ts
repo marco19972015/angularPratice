@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent{
 
+  randomName: string = 'John Snow'
+
   firstName: string = 'John';
   lastName: string = 'Smith';
   age: number = 25
@@ -18,7 +20,8 @@ export class ParentComponent{
     phoneSerial: 1010101,
     price: 800,
     discount: .2,
-    inStock: 5
+    inStock: 10,
+    pImage: '/assets/images/iphone12.jpeg'
   }
 
   getDiscount() {
