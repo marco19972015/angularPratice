@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent{
 
+  addToCart: number = 0;
+
   randomName: string = 'John Snow'
 
   firstName: string = 'John';
@@ -20,7 +22,7 @@ export class ParentComponent{
     phoneSerial: 1010101,
     price: 800,
     discount: .2,
-    inStock: 10,
+    inStock: 11,
     pImage: '/assets/images/iphone12.jpeg'
   }
 
@@ -38,6 +40,25 @@ export class ParentComponent{
     console.log(event.target.value);
     // We can then set the value in our input = to our property randomName 
     this.randomName = event.target.value;
+  }
+
+
+  decrementValaue() {
+
+    if(this.addToCart > 0){
+      this.addToCart--;
+    }
+    // if (this.addToCart <= 0){
+    //   this.addToCart = 0;
+    // } else {
+    //   this.addToCart -= 1
+    // }
+  }
+
+  incrementValue() {
+    if(this.addToCart < this.product.inStock){
+      this.addToCart++;
+    }
   }
   
 }

@@ -1,12 +1,14 @@
+<div class="ekart--product--container">
+<!-- 
 <div class="parent">
 <p>FirstName: {{ firstName }}</p>
 <p>LastName: {{ lastName }}</p>
 <p>Age: {{ age }}</p>
 
-<!-- Below we use property binding using square brackets -->
+Below we use property binding using square brackets 
 <img [src]="product.pImage">
 
-<!-- Evertything below is string interpolation -->
+ Evertything below is string interpolation 
 <p> {{ product.phoneBrand }}</p>
 <p> {{ product.phoneType }}</p>
 <p> {{ product.phoneSerial }}</p>
@@ -15,12 +17,24 @@
 <button [disabled]="!(product.inStock > 0)">Buy Now</button> 
 <br>
 
-<!-- brackets is property binding. Paranthesis is event binding -->
-<!-- Using the $event variable to get the event object -->
+brackets is property binding. Paranthesis is event binding 
+ Using the $event variable to get the event object 
 <input [value]="randomName" (input)="onNameChange($event)">
-<p>name = {{randomName}}</p>
+<br><br>
+<button (click)="decrementValaue()">-</button>
+<span>{{ addToCart }}</span>
+<button (click)="incrementValue">+</button>
 
+
+<p>name = {{randomName}}</p>
+ 
         <div class="child">
             <app-child></app-child>
         </div>
+</div>
+-->
+
+
+
+
 </div>
