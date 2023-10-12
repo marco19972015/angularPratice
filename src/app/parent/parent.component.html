@@ -1,9 +1,8 @@
-<div style="border: solid black; padding: 20px; ">
-    <p>From parent component</p>
-    message: {{ message }}
-        <div style="border: solid red; ">
-            <app-child>
-
-            </app-child>
+<div class="parent">
+<p>FirstName: {{ firstName }}</p>
+<p>LastName: {{ lastName }}</p>
+<p>Age: {{ age }}</p>
+        <div class="child">
+            <app-child></app-child>
         </div>
 </div>
