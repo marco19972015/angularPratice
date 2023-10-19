@@ -1,4 +1,14 @@
 <div class="ekart--product--container">
     <app-search></app-search>
+    
+    <div style="margin-bottom: 20px;">
+    <app-filter 
+    [allBrands]="totalProdCount" 
+    [priceOver]="totalProductsOver"
+    [priceUnder]="totalProductsUnder" 
+    ></app-filter>
+    </div>
+
     <app-product *ngFor="let prod of products" [product]="prod"></app-product>
+
 </div>

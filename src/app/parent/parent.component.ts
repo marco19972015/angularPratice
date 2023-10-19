@@ -21,7 +21,7 @@ export class ParentComponent{
     },
     {
       brand: 'Reebok',
-      price: 100,
+      price: 90,
       location: 'California'
     },
     {
@@ -41,16 +41,21 @@ export class ParentComponent{
     },
     {
       brand: 'Reebok',
-      price: 100,
+      price: 75,
       location: 'California'
     },
     {
       brand: 'Assics',
-      price: 175,
+      price: 95,
       location: 'France'
     },
   ]
+
+  totalProdCount = this.products.length;
    
+  totalProductsOver = this.products.filter(p => p.price > 100).length;
+
+  totalProductsUnder = this.products.filter(p => p.price < 100).length;
   
 }
  
