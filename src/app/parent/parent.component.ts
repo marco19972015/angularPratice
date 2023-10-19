@@ -8,7 +8,49 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent{
 
-  listOfStrings: string[] = ['Mark', 'stephen', 'John', 'Simon'];
+  products = [
+    {
+      brand: 'Nike',
+      price: 200,
+      location: 'New York'
+    },
+    {
+      brand: 'Jordan',
+      price: 150,
+      location: 'Arizona'
+    },
+    {
+      brand: 'Reebok',
+      price: 100,
+      location: 'California'
+    },
+    {
+      brand: 'Assics',
+      price: 175,
+      location: 'France'
+    },
+    {
+      brand: 'Nike',
+      price: 200,
+      location: 'New York'
+    },
+    {
+      brand: 'Jordan',
+      price: 150,
+      location: 'Arizona'
+    },
+    {
+      brand: 'Reebok',
+      price: 100,
+      location: 'California'
+    },
+    {
+      brand: 'Assics',
+      price: 175,
+      location: 'France'
+    },
+  ]
+   
   
 }
  

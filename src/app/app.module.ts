@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SearchComponent } from './parent/search/search.component';
+import { ProductComponent } from './parent/product/product.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SearchComponent } from './parent/search/search.component';
     ParentComponent,
     ChildComponent,
     SearchComponent,
+    ProductComponent,
     
   ],
   imports: [
