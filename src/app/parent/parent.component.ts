@@ -12,50 +12,67 @@ export class ParentComponent{
     {
       brand: 'Nike',
       price: 200,
-      location: 'New York'
+      location: 'New York',
+      inStock: false
     },
     {
       brand: 'Jordan',
       price: 150,
-      location: 'Arizona'
+      location: 'Arizona',
+      inStock: true
     },
     {
       brand: 'Reebok',
       price: 90,
-      location: 'California'
+      location: 'California',
+      inStock: true
     },
     {
       brand: 'Assics',
       price: 175,
-      location: 'France'
+      location: 'France',
+      inStock: false
     },
     {
       brand: 'Nike',
       price: 200,
-      location: 'New York'
+      location: 'New York',
+      inStock: true
     },
     {
       brand: 'Jordan',
       price: 150,
-      location: 'Arizona'
+      location: 'Arizona',
+      inStock: true
     },
     {
       brand: 'Reebok',
       price: 75,
-      location: 'California'
+      location: 'California',
+      inStock: false
     },
     {
       brand: 'Assics',
       price: 95,
-      location: 'France'
+      location: 'France',
+      inStock: true
     },
   ]
 
   totalProdCount = this.products.length;
-   
-  totalProductsOver = this.products.filter(p => p.price > 100).length;
+  productInStock = this.products.filter(p => p.inStock === true).length;
+  productNotInStock = this.products.filter(p => p.inStock === false).length;
 
-  totalProductsUnder = this.products.filter(p => p.price < 100).length;
-  
+  selectedFilterRadioButton: string = 'all'
+
+  onFilterChanged(value: string) {
+    this.selectedFilterRadioButton = value;
+
+ this.productInStock
+ this.productNotInStock
+    
+    
+
+  }
 }
  
