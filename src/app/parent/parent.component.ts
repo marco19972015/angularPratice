@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from '../Models/Product';
 
 
 @Component({
@@ -9,7 +10,10 @@ import { Component } from '@angular/core';
 export class ParentComponent{
 
   // Binding this to SearchTechChange (search child component) 
-  searchText: string = ""
+  searchText: string = "";
+
+  selectedProduct: Product;
+
 
   products = [
     {
