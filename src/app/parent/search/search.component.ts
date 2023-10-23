@@ -14,16 +14,11 @@ export class SearchComponent {
   // We use the Output decorator to bind the event in the parent component
   @Output() SearchTextChange: EventEmitter<string> = new EventEmitter<string>()
 
-  // Create method that will raise the event
-  onSearchTextChange() {
-    // When the input value is raised this method will be emitted
-    // that will populate our searchText
-    this.SearchTextChange.emit(this.searchText)
-  }
 
-
-
-  // updateSearchText(event: any) {
-  //   this.searchText = event.target.value;
-  //  }
+  updateSearchText(inputEl: HTMLInputElement) {
+    // this.searchText = event.target.value;
+    // console.log(inputEl);
+    this.searchText = inputEl.value;
+    this.SearchTextChange.emit(this.searchText);
+   }
 }
