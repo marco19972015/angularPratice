@@ -9,6 +9,9 @@ export class ProductComponent {
   @Input() product: {brand: string, price: number, location: string, inStock: boolean};
 
   constructor(){
-    
   }
+
+  
+  @Input() searchText: string = '';
+
 }

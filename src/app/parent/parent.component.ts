@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent{
 
+  // Binding this to SearchTechChange (search child component) 
+  searchText: string = ""
+
   products = [
     {
       brand: 'Nike',
@@ -62,17 +65,16 @@ export class ParentComponent{
   totalProdCount = this.products.length;
   productInStock = this.products.filter(p => p.inStock === true).length;
   productNotInStock = this.products.filter(p => p.inStock === false).length;
-
   selectedFilterRadioButton: string = 'all'
 
   onFilterChanged(value: string) {
     this.selectedFilterRadioButton = value;
+  }
 
- this.productInStock
- this.productNotInStock
-    
-    
-
+  // The bind happens because we pass in the value into our method
+  setSearchText(value: any) {
+    // We can then just link the searchText property to the input value being passed in
+    this.searchText = value
   }
 }
  
