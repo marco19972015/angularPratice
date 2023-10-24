@@ -14,7 +14,7 @@
     <!-- [product]="prod" app-product *ngIf="selectedFilterRadioButton === 'all' || prod.inStock.toString() === selectedFilterRadioButton" -->
     <div *ngFor="let prod of products" (click)="selectedProduct = prod">
         <app-product #productComponent [searchText]="searchText" [product]="prod" *ngIf="searchText === '' || prod.brand.toLowerCase().includes(searchText)"></app-product>
-        <product-detail *ngIf="selectedProduct"></product-detail>
+        <product-detail [producted]="selectedProduct"  *ngIf="selectedProduct" [productComp]="productComponent"></product-detail>
     </div>
     
 </div>

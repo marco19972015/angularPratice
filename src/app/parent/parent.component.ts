@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Product } from '../Models/Product';
+import { ProductComponent } from './product/product.component';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class ParentComponent{
 
   selectedProduct: Product;
 
+  @ViewChild(ProductComponent) productComponent: ProductComponent;
 
   products = [
     {

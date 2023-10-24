@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { Product } from 'src/app/Models/Product';
 
 @Component({
@@ -16,8 +16,12 @@ export class ProductComponent {
 
   constructor(){
   }
+  
 
   
   @Input() searchText: string = '';
+
+
+  
 
 }

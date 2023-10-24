@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from 'src/app/Models/Product';
+import { ProductComponent } from '../product/product.component';
+
 
 @Component({
   selector: 'product-detail',
@@ -7,5 +9,14 @@ import { Product } from 'src/app/Models/Product';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent {
+  @Input() productComp: ProductComponent = undefined;
+
+  @Input() producted: any;
+
   product: Product;
+
+
+  
+  
+
 }
