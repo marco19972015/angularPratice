@@ -12,9 +12,9 @@
             <h2>{{producted.brand}}</h2>
         </div>
         <div class="ekart-product-detail-gbc">
-            <span>{{"Located in: " + producted.location}} </span><br>
-            <span>{{"Sneaker Brand: " + producted.brand}}</span><br>
-            <span> {{"Price: $" + producted.price}}</span>
+            <span setBackground>{{"Located in: " + producted.location}} </span><br>
+            <span setBackground>{{"Sneaker Brand: " + producted.brand}}</span><br>
+            <span setBackground> {{"Price: $" + producted.price}}</span>
         </div>
         <div class="ekart-product-detail-price">
             <p *ngIf="producted.inStock">

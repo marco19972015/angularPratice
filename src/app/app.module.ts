@@ -10,6 +10,8 @@ import { ProductComponent } from './parent/product/product.component';
 import { FilterComponent } from './parent/filter/filter.component';
 import { ProductDetailComponent } from './parent/product-detail/product-detail.component';
 
+import { SetBackground } from './CustomDirectives/SetBackground.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,11 +21,12 @@ import { ProductDetailComponent } from './parent/product-detail/product-detail.c
     ProductComponent,
     FilterComponent,
     ProductDetailComponent,
-    
+    SetBackground
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule, 
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
