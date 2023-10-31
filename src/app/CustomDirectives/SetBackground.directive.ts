@@ -1,36 +1,31 @@
-// Import the artifacts needed
-import { Directive, OnInit, ElementRef } from "@angular/core";
+import { Directive, OnInit, ElementRef, Renderer2 } from "@angular/core";
 
-// create the meta data for the directive
+
 @Directive({
-    // Create the selector enclosed in brackets to indicate the use case (to be used in elements)
     selector: '[setBackground]'  
 })
 
 export class SetBackground implements OnInit {
 
-    // instaed of writing private here we can do it in the contructor
-    // private element: ElementRef
+    // private renderer: Renderer2;
 
-    // we provide an access modifier
-    // behind the scenes TS create a private element property 
-    constructor(private element: ElementRef) {
-        // So we end up not needing line 11 and line 17
-        this.element = element;
-
-        // We normaly don't want to keep this kind of logic in the constructor
-        // because it is used to create an instance of that component or the directive
-        // and when it gets called it's properties are not initialized yet
-
-        // this.element.nativeElement.style.backgroundColor = '#36454F';
-        // this.element.nativeElement.style.color = 'White'
+    constructor(private element: ElementRef, private renderer: Renderer2) {
+        // this.renderer = renderer;
     }
 
-    // Remember that ngOnInit gets called after all the properties are fully initialized
     ngOnInit() {
-        // we retreive the element in which the directives selector is attached to 
-        // and assign the code below
-        this.element.nativeElement.style.backgroundColor = '#36454F';
-        this.element.nativeElement.style.color = 'White'
+        // native element contains a reference to the underlining DOM element. Gives us a direct access to the DOM 
+        // this.element.nativeElement.style.backgroundColor = '#36454F';
+        // this.element.nativeElement.style.color = 'White'
+
+        // we can set css styles using setStyle method
+        // takes three required parameters 
+            // 1. Is the element on which we want to set the style
+            // 2. The style we want to set
+            // 3. The value for that style 
+        // the renderer class creates an abstraction between the DOM and the code 
+        this.renderer.setStyle(this.element.nativeElement, 'backgroundColor', '#36454F')
+        this.renderer.setStyle(this.element.nativeElement, 'color', 'red')
+        this.renderer.setAttribute(this.element.nativeElement, 'title', 'This is example title')
     }
 }
