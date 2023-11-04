@@ -11,11 +11,18 @@
         <div class="ekart-product-detail-name">
             <h2>{{producted.brand}}</h2>
         </div>
+
+
+
         <div class="ekart-product-detail-gbc">
-            <span setBackground>{{"Located in: " + producted.location}} </span><br>
-            <span setBackground>{{"Sneaker Brand: " + producted.brand}}</span><br>
-            <span setBackground> {{"Price: $" + producted.price}}</span>
+            <!-- we are using property binding to call setBackground alias in the Input decorators  -->
+            <span [setBackground]="{backColor: 'red', textColor:'white'}">  {{"Located in: " + producted.location}} </span><br>
+            <span [setBackground]="{backColor: 'black', textColor:'white'}">{{"Sneaker Brand: " + producted.brand}}</span><br>
+            <span [setBackground]="{backColor: 'blue', textColor:'white'}"> {{"Price: $" + producted.price}}</span>
         </div>
+
+
+
         <div class="ekart-product-detail-price">
             <p *ngIf="producted.inStock">
                 <b>Price Each Pair: </b>
