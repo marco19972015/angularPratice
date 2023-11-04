@@ -1,5 +1,5 @@
 <!-- Using the directive on the div (the host) we can access a reference of this DIV element -->
-<div appHighlight>
+<div appHighlight [disableProduct]="!product.inStock">
     {{product.brand}}
     {{product.price}}
     {{product.location}}
